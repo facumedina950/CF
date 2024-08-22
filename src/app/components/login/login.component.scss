@@ -1,16 +1,114 @@
 .container{
-  margin: 0%;
+  margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
+  padding: 0cm;
+  width: 1440px;
+  height: 900px;
  
 }
+.container__fondo{
+  background: linear-gradient(180deg, #33A3AA 0%, #107076 100%);
+  opacity: 85%;
+  position: absolute;
+  width: 796px;
+  height: 900px;
+  
+}  
 .container__Izquierdo{
-    background-image: url(/assets/imagenChallenge.jpg);
-    margin: 0px;
-    width: auto;
-    color: white;
-    justify-content: center;
-    align-items: center;
+  background:url(https://s3-alpha-sig.figma.com/img/9d74/e6ed/a0d1013d36e21f2381ef822d0e1d387b?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=i~tipN96JIA0gHsq~Da5Yl1M2iV2NPwuht~XKzZkA3qReJWCuLgz8sx64WTcXf3SgUwK4czx0Z88N99bQlIlvEtmOM9~sa-qTs0mpC92ubIIPUp064lRuw4X~jYC04zaXdQa3unHbTbnJFYsxJesvJ68MXP4vTa3yvQomvVAov4H97BM~mlpuciGfI582h8fGUY31jZsfx6ToILLgBlmqukfnvo~2rle5xrg37pj~1NmnK8jGWqpHVg~3kLt~yKbyOzOwpcnrPVeEJEKRtwNpGNwNQY5UxdUhq-xSJ9U9zuU6S1-YFQ-Ru2CZmXKxsSoIuosNJi9kxIYB~-wyUqjOg__);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+    width: 796px;
+    height: 900px;
+    gap: 0px;
     
+    align-content: center;
+    background-position: -655px -5px;
+    padding-left: 120px;
+
+  
+   
+    
+    &-iniciar{
+      width: 361px;
+      height: 58px;
+      top: 319px;
+      left: 128px;
+      gap: 0px;
+      opacity: 1;
+      color: rgba(255, 255, 255, 1);
+      ;
+      
+    }
+    &-nos{
+      width: 360px;
+      height: 72px;
+      top: 387px;
+      left: 128px;
+      gap: 0px;
+      opacity: 0px;
+      color: rgba(255, 255, 255, 1);
+      ;
+
+
+    }
+    &-monitoreo{
+      width: 411px;
+      height: 41px;
+      top: 479px;
+      left: 128px;
+      gap: 0px;
+      opacity: 0px;
+      color: rgba(255, 255, 255, 1);
+    }
+    &-monitoreos{
+      width: 411px;
+      height: 41px;
+      top: 479px;
+      left: 128px;
+      gap: 0px;
+      opacity: 0px;
+      color: rgba(255, 255, 255, 1);
+    }
+    &-notificaciones{
+      width: 380px;
+      height: 41px;
+      top: 540px;
+      left: 130px;
+      gap: 0px;
+      opacity: 0px;
+      color: rgba(255, 255, 255, 1);
+    }
+    &-notificacioness{
+      width: 380px;
+      height: 41px;
+      top: 540px;
+      left: 130px;
+      gap: 0px;
+      opacity: 0px;
+      color: rgba(255, 255, 255, 1);
+    }
+
+}
+
+ .green{
+  color: dodgerblue;
+ }
+
+.container__Derecho{
+  width: 675px;
+  height: 900px;
+  left: 765px;
+  position: absolute;
+  align-content: center;
+  background-color: #DCDBDD;
+  padding: 120px;
+  padding-top: 90px;
+  border: 1px solid rgba(220, 219, 221, 1)
+
+
 }
