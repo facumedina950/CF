@@ -1,0 +1,16 @@
+.container{
+  margin: 0%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+ 
+}
+.container__Izquierdo{
+    background-image: url(/assets/imagenChallenge.jpg);
+    margin: 0px;
+    width: auto;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    
+}
