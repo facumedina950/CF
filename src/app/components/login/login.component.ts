@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +9,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit{
 
+login = []
 
-
-constructor(private formulario:FormBuilder){}
+constructor(private formulario:FormBuilder, private loginService:LoginService){}
 
 usuarios:FormGroup = this.formulario.group({
   email:['Luciando@email.com', [Validators.required, Validators.email]],
@@ -19,6 +20,13 @@ usuarios:FormGroup = this.formulario.group({
 
 ngOnInit(): void {
   
+  this.loginService.login().subscribe({
+    next: (respuesta)=>{
+      console.log(respuesta)
+      this.login = respuesta
+    }
+  })
+ 
 }
 
 muestreUsuario(){
@@ -27,4 +35,5 @@ muestreUsuario(){
 
 mostrarUsuario:string = this.usuarios.controls['email'].value
 
+ 
 }
