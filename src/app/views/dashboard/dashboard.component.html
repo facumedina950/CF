@@ -1,0 +1,21 @@
+ <div class="dashboard">
+  <div class="items-container">
+
+
+    <app-items
+    *ngFor="let item of items" 
+      [titulo]="item.titulo" 
+      [valor]="item.valor"
+      [icono]="item.icono">
+  
+    </app-items>
+  </div>
+  <br><br><br>
+  
+  <div class="indicadores"> 
+    <app-indicadores [indicadores]="indicadoresLista"></app-indicadores>
+  </div>
+    <br>
+    <button (click)="logout()">Cerrar Sesión</button>
+  
+</div>  

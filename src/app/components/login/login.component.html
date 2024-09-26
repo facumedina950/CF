@@ -17,7 +17,7 @@
        <div><strong><h4>Iniciar sesión</h4></strong></div>
  
        <br>
-      <form [formGroup]="usuarios">
+      <form [formGroup]="usuarios" (ngSubmit)="onSubmit()">
 
           <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email</label>
@@ -49,7 +49,7 @@
 
           </div>  
              
-          <div id="emailHelp" class="form-text">¿Olvidaste tu contraseña? <button (click)="muestreUsuario()" type="submit" [disabled]="usuarios.invalid || usuarios.untouched" class="btn btn-info">Iniciar sesión</button></div>
+          <div id="emailHelp" class="form-text">¿Olvidaste tu contraseña? <button (click)="muestreUsuario()" type="submit" [disabled]="usuarios.invalid" class="btn btn-info" routerLink="dashboard">Iniciar sesión</button></div>
 
          
           
@@ -57,5 +57,9 @@
           <div id="emailHelp" class="form-text">Protegido por reCAPTCHA y sujeto a la <span class="green" > Politica de Privacidad </span>y <span class="green">Condiciones.</span></div>
 
       </form>  
+
+      
+    
     </div>
+
 </div>  

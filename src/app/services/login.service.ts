@@ -3,24 +3,19 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http:HttpClient) { }
-
-  login(): Observable<any> {
-    return this.http.post('https://cf-backend-2.onrender.com/api/users/login', {
-      email: 'johndoe@gmail.com',
-      password: 'strongpassword',
-    });
+  login(body: any): Observable<any> {
+    return this.http.post(
+      'https://cf-backend-2.onrender.com/api/users/login',
+      body
+    );
   }
 
   getlogin(): Observable<any> {
-
-    return this.http.get('https://cf-backend-2.onrender.com/api/docs')
-
+    return this.http.get('https://cf-backend-2.onrender.com/api/docs');
   }
-
-
 }

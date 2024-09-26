@@ -1,0 +1,20 @@
+<div class="indicadores">
+  <div class="indicadores__item" *ngFor="let indicador of indicadores">
+    <div class="indicadores__item-info">
+      <div class="indicadores__item-info-titulo">
+        {{ indicador.nombre }}
+      </div>
+      <div class="indicadores__item-info-estado">
+        <span> {{ indicador.ok }}</span>
+        <span>  {{ indicador.medio }}</span>
+        <span>{{ indicador.alerta }}</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="indicadores__item-icon">
+        <img class="indicadores__item-icon-imagen" [src]="indicador.icono" alt="{{ indicador.nombre }}" />
+      </div>
+    </div>
+  </div>
+</div>
