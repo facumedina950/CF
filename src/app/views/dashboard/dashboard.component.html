@@ -3,10 +3,10 @@
 
 
     <app-items
-    *ngFor="let item of items" 
-      [titulo]="item.titulo" 
-      [valor]="item.valor"
-      [icono]="item.icono">
+    *ngFor="let item of data"
+      [titulo]="item.status" 
+      [valor]="item.count"
+      [icono]="item.description">
   
     </app-items>
   </div>
