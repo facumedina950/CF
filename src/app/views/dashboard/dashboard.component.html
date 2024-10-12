@@ -1,21 +1,21 @@
- <div class="dashboard">
+<div class="dashboard">
   <div class="items-container">
-
-
     <app-items
-    *ngFor="let item of data"
-      [titulo]="item.status" 
+      *ngFor="let item of data"
+      [titulo]="item.status"
       [valor]="item.count"
-      [icono]="item.description">
-  
+      [icono]="item.description"
+    >
     </app-items>
   </div>
-  <br><br><br>
+
   
-  <div class="indicadores"> 
+  <br /><br /><br />
+
+  <div class="indicadores">
     <app-indicadores [indicadores]="indicadoresLista"></app-indicadores>
   </div>
-    <br>
-    <button (click)="logout()">Cerrar Sesión</button>
-  
-</div>  
+  <br />
+  <button (click)="logout()">Cerrar Sesión</button>
+</div>
+<app-boton-modal> </app-boton-modal>

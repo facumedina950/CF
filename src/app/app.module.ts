@@ -11,6 +11,15 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { AuthGuard } from './auth.guard';
 import { ItemsComponent } from './components/items/items.component';
 import { IndicadoresComponent } from './components/indicadores/indicadores.component';
+import { ModalFormComponent } from './components/modal-form/modal-form.component';
+import { ApiService } from './services/api.service';
+import { BotonModalComponent } from './components/boton-modal/boton-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -18,17 +27,24 @@ import { IndicadoresComponent } from './components/indicadores/indicadores.compo
     LoginComponent,
     DashboardComponent,
     ItemsComponent,
-    IndicadoresComponent
+    IndicadoresComponent,
+    ModalFormComponent,
+    BotonModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule
     
   ],
-  providers: [CookieService, AuthGuard],
+  providers: [CookieService, AuthGuard, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
