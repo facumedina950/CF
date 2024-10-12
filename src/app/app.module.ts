@@ -11,6 +11,7 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { AuthGuard } from './auth.guard';
 import { ItemsComponent } from './components/items/items.component';
 import { IndicadoresComponent } from './components/indicadores/indicadores.component';
+import { ModalFormComponent } from './modal-form/modal-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { IndicadoresComponent } from './components/indicadores/indicadores.compo
     LoginComponent,
     DashboardComponent,
     ItemsComponent,
-    IndicadoresComponent
+    IndicadoresComponent,
+    ModalFormComponent
   ],
   imports: [
     BrowserModule,

@@ -10,20 +10,20 @@ export class ItemsComponent implements OnInit{
   @Input() titulo: string = '';
   @Input() valor: number = 0;
   @Input() icono: string = '';
-  backgroundColor:string = ''
+  @Input() backgroundColor:string = ''
   ngOnInit(){
-   this.backgroundColor= this.setBackgroundcolor(this.icono)
+   //this.backgroundColor= this.setBackgroundcolor(this.icono)
   }
 
-  setBackgroundcolor(alert:string){
-    if(alert.includes('Vector')){
-      return 'items__alert-img--green'
-    }
-    if(alert.includes('AlertaMedia')){
-      return 'items__alert-img--yellow'
-    }
-    return ''
-  }
+ // setBackgroundcolor(alert:string){
+ //   if(alert.includes('Vector')){
+ //     return 'items__alert-img--green'
+ //   }
+ //   if(alert.includes('AlertaMedia')){
+ //     return 'items__alert-img--yellow'
+ //   }
+ //   return ''
+ // }
   
 }
 

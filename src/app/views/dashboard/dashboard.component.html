@@ -1,15 +1,21 @@
  <div class="dashboard">
-  <div class="items-container">
+  <div class="items-container" *ngIf="data.length > 0; else loading">
 
 
     <app-items
     *ngFor="let item of data"
+      [backgroundColor]="item.color"
       [titulo]="item.status" 
       [valor]="item.count"
       [icono]="item.description">
   
     </app-items>
   </div>
+
+  <ng-template #loading>
+    <p>Actualizando datos...</p>
+  </ng-template>
+  
   <br><br><br>
   
   <div class="indicadores"> 
