@@ -1,21 +1,26 @@
-<div class="dashboard">
-  <div class="items-container">
+ <div class="dashboard">
+  <div class="items-container" *ngIf="data.length > 0; else loading">
+
+
     <app-items
-      *ngFor="let item of data"
-      [titulo]="item.status"
+    *ngFor="let item of data"
+      [backgroundColor]="item.color"
+      [titulo]="item.status" 
       [valor]="item.count"
       [icono]="item.description"
     >
     </app-items>
   </div>
 
+  <ng-template #loading>
+    <p>Actualizando datos...</p>
+  </ng-template>
   
-  <br /><br /><br />
+  <br><br><br>
 
   <div class="indicadores">
     <app-indicadores [indicadores]="indicadoresLista"></app-indicadores>
   </div>
   <br />
-  <button (click)="logout()">Cerrar Sesión</button>
 </div>
 <app-boton-modal> </app-boton-modal>
