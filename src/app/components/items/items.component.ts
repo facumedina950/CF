@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ItemsComponent implements OnInit{
  
+  
   @Input() titulo: string = '';
   @Input() valor: number = 0;
   @Input() icono: string = '';

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { DataService } from 'src/app/services/data.service';
+import { ApiService } from 'src/app/services/api.service';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -14,10 +16,14 @@ export class DashboardComponent {
   data: any[] = [];
   errorMessage: string = '';
   //AGREGO SERVICE A CONSTRUCTOR
-  constructor(private router: Router, private cookies: CookieService, private dataService: DataService) {}
+  constructor(private router: Router, private cookies: CookieService, private dataService: DataService, private apiService: ApiService) {}
   // EJECUTO AL CARGAR COMPONENTE
   ngOnInit(): void {
     this.loadData();
+
+    this.apiService.itemAdded$.subscribe(() => {
+      this.loadData();
+    });
   }
 
   // LLAMADO A LA API
